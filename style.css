@@ -11,6 +11,7 @@ nav {
   background: #333;
   color: white;
   font-size: 1.5rem;
+  width: 100vw;
 }
 
 .highlight {
@@ -44,7 +45,6 @@ input.answer {
   background: #f1f1f1;
   box-shadow: 2px 2px 2px rgba(9, 9, 9, 0.2);
   margin-top: 25px;
-  height: 85vh;
   display: flex;
   flex-direction: column;
   padding: 1rem;
