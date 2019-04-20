@@ -63,7 +63,6 @@ function deleteLastInput(e) {
   let inputArr = Array.from(input.value);
   inputArr.pop();
   const newInput = inputArr.join("");
-  console.log(newInput);
   input.value = newInput;
 }
 
@@ -74,15 +73,16 @@ function addParenths() {
 
 // History Button
 function revertToHistory(e) {
-  input.value = historyValue;
+  if(historyValue == "undefined") {
+    input.value = '';
+  } else input.value = historyValue;
 }
 
 // Plus/Minus btn
 function changePlusMinus(e) {
-  if (e.target.value >= 0) {
+  if (input.value >= 0) {
     input.value = `(-${input.value})`;
   } else {
-    input.value =  `(+${input.value})`;
+    input.value = Math.abs(input.value);
   }
-  console.log(e.target.value > 0);
 }
