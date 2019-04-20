@@ -40,7 +40,7 @@ input.answer {
 }
 
 .card {
-  width: 375px;
+  width: 360px;
   margin: auto;
   background: #f1f1f1;
   box-shadow: 2px 2px 2px rgba(9, 9, 9, 0.2);
@@ -57,7 +57,7 @@ input.answer {
 }
 
 button {
-  width: 24%;
+  width: 23.9%;
   height: 20%;
   margin-top: 3px;
   border: none;
