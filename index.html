@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Javascript Calculator</title>
+  </head>
+  <body>
+    <nav>
+      <h1>JS<span class="highlight">Calc</span></h1>
+    </nav>
+
+    <div class="calculator card">
+      <input type="text" onload="inputFocus()" />
+      <div class="button-ui">
+        <button class="btn-span btn-history">History</button>
+
+        <button class="btn-span btn-delete">Delete</button>
+
+        <button value="clear" id="clear">C</button>
+        <button value="()" id="parenths">()</button>
+        <button value="%" class="operator">%</button>
+        <button value="/" class="operator">÷</button>
+        <button value="7" class="num">7</button>
+        <button value="8" class="num">8</button>
+        <button value="9" class="num">9</button>
+        <button value="*" class="operator">x</button>
+        <button value="4" class="num">4</button>
+        <button value="5" class="num">5</button>
+        <button value="6" class="num">6</button>
+        <button value="-" class="operator">-</button>
+        <button value="1" class="num">1</button>
+        <button value="2" class="num">2</button>
+        <button value="3" class="num">3</button>
+        <button value="+" class="operator">+</button>
+        <button value="" id ="plusMinus" class="num">+/-</button>
+        <button value="0" class="num">0</button>
+        <button value="." class="operator">.</button>
+        <button value="equals" class="btn-equals">=</button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
