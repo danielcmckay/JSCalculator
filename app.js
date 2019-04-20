@@ -33,11 +33,9 @@ const plusMinusBtn = document
 function getValue(e) {
   let buttonValue = e.target;
 
-  
-  if (buttonValue.className !== 'btn-equals' && input.className === "answer") {
+  if (buttonValue.className !== "btn-equals" && input.className === "answer") {
     clear();
   }
-
 
   if (buttonValue.className === "num" || buttonValue.className === "operator") {
     input.value += buttonValue.value;
@@ -89,7 +87,7 @@ function revertToHistory(e) {
 // Plus/Minus btn
 function changePlusMinus(e) {
   if (input.value >= 0) {
-    input.value = `(-${input.value})`;
+    input.value = `-${input.value}`;
   } else {
     input.value = Math.abs(input.value);
   }
