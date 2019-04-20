@@ -33,6 +33,12 @@ const plusMinusBtn = document
 function getValue(e) {
   let buttonValue = e.target;
 
+  
+  if (buttonValue.className !== 'btn-equals' && input.className === "answer") {
+    clear();
+  }
+
+
   if (buttonValue.className === "num" || buttonValue.className === "operator") {
     input.value += buttonValue.value;
   }
@@ -40,6 +46,7 @@ function getValue(e) {
 
 // Clear Button
 function clear() {
+  input.className = "";
   input.value = "";
 }
 
@@ -50,6 +57,7 @@ function evaluateInput() {
 
   try {
     newInput = eval(input.value);
+    input.className = "answer";
     input.value = newInput;
     console.log(historyValue);
   } catch {
@@ -73,8 +81,8 @@ function addParenths() {
 
 // History Button
 function revertToHistory(e) {
-  if(historyValue == "undefined") {
-    input.value = '';
+  if (historyValue == "undefined") {
+    input.value = "";
   } else input.value = historyValue;
 }
 
